@@ -23,7 +23,7 @@ jobs:
         password: ${{ secrets.GHCR_TOKEN }}    
     
     - name: Build the Docker image
-      working-directory: stabox
+      working-directory: /
       run: |
         docker build . --file Dockerfile -t ghcr.io/bognarpal/stabox:${{steps.package-version.outputs.current-version}} -t ghcr.io/bognarpal/stabox:latest 
         docker push ghcr.io/bognarpal/stabox:latest
