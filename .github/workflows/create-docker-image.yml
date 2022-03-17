@@ -13,7 +13,7 @@ jobs:
       id: package-version
       uses: martinbeentjes/npm-get-version-action@master
       with:
-        path: / 
+        path: . 
         
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v1
